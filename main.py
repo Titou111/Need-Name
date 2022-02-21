@@ -1,6 +1,10 @@
 import pygame
 pygame.init()
 
+clock = pygame.time.Clock()
+#Pour la création d'un fichier de réglage (FPS)
+FPS = 144
+
 getResolution = pygame.display.Info()
 pygame.display.set_mode((getResolution.current_w, getResolution.current_h))
 
@@ -16,3 +20,6 @@ while running:
             running = False
             pygame.quit()
             print("Jeu quitté")
+
+
+    clock.tick(FPS)
