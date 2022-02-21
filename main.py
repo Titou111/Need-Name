@@ -15,11 +15,15 @@ pygame.display.set_caption("Pas Encore De Nom ^^")
 
 running = True
 while running:
+
+    clock.tick(FPS)
+    print(clock.get_fps())
+    if 59 >= clock.get_fps():
+        print("Fréquence d'image faible")
+
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
             pygame.quit()
             print("Jeu quitté")
-
-
-    clock.tick(FPS)
