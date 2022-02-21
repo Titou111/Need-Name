@@ -35,10 +35,13 @@ while running:
     if 59 >= clock.get_fps():
         print("Fréquence d'image faible")
 
+    pygame.display.update()
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
             pygame.quit()
             print("Jeu quitté")
 
-    pygame.display.update()
+
+
